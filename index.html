@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>Light ON-OFF</h1>
+      <h2 id="cont-h2">Sthiti can you turn on the light?</h2>
+
+      <img
+        src="lightoff.png"
+        alt="picture loading"
+        id="myImage"
+        width="100px"
+      />
+      <button onclick="changeOffImage()" id="btn">
+        Turn on the light
+      </button>
+      <!-- <button onclick="changeOnImage()">
+        Turn off the light
+      </button> -->
+    </div>
+    <script>
+        let lightOn=false;
+      const changeOffImage = () => {
+        lightOn=!lightOn;
+
+        if(lightOn){
+            document.getElementById("myImage").src = "lighton.png";
+            document.getElementById("cont-h2").innerHTML="Sthiti can you turn off the light?";
+            document.getElementById('btn').innerHTML="Turn off the light";
+
+        }
+        else{
+            document.getElementById("myImage").src = "lightoff.png";
+            document.getElementById("cont-h2").innerHTML="Sthiti can you turn on the light?";
+            document.getElementById('btn').innerHTML="Turn on the light";
+        }
+      };
+    //   const changeOnImage = () => {
+    //     document.getElementById("myImage").src = "lightoff.png";
+    //     document.getElementById("cont-h2").innerHTML="Can you turn on the light?";
+    //   };
+    </script>
+  </body>
+</html>
